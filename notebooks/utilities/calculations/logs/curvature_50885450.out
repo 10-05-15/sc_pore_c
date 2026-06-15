@@ -1,0 +1,833 @@
+
+Job information
+#-------------------------------------------------------------------
+SLURM_SUBMIT_HOST    gl0004.arc-ts.umich.edu
+SLURM_JOB_ACCOUNT    indikar0
+SLURM_JOB_PARTITION  standard
+SLURM_JOB_NAME       curvature_pop_chr
+SLURM_JOBID          50885450
+SLURM_NODELIST       gl3432
+SLURM_JOB_NUM_NODES  1
+SLURM_NTASKS         1
+SLURM_TASKS_PER_NODE 1
+SLURM_CPUS_PER_TASK  3
+SLURM_NPROCS         1
+SLURM_MEM_PER_CPU    
+SLURM_SUBMIT_DIR     /home/jduhamel/sc_pore_c/notebooks/utilities/calculations
+
+scheduling priority             (-e) 0
+pending signals                 (-i) 765365
+max memory size         (kbytes, -m) 67108864
+open files                      (-n) 131072
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+max user processes              (-u) 765365
+
+Running on gl3432.arc-ts.umich.edu at Mon May 25 20:34:42 EDT 2026
+
+Currently Loaded Modules:
+  1) mamba/py3.12
+
+Your job output begins below the line
+#-------------------------------------------------------------------
+Processing chr1...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr1.h5ad ...
+  Raw: 193 loci x 124,447 reads
+  IQR-filtering loci ...
+    degree range kept: [1164.5, 2088.5]  -> 189 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 189 loci x 119,896 reads
+
+[Step 1] Building poset complex ...  [3.4s]
+  Building node sets from H ...  [3.4s]
+  189 loci + 119,896 non-empty reads  [8.2s]
+  Building inverted index ...  [8.2s]
+  Computing Hasse diagram (k_max = 10) ...  [8.3s]
+    cardinality   10:       37 nodes  [8.3s]
+    cardinality    9:       65 nodes  [8.5s]
+    cardinality    8:      203 nodes  [8.9s]
+    cardinality    7:      524 nodes  [10.0s]
+    cardinality    6:    1,309 nodes  [12.4s]
+    cardinality    5:    3,351 nodes  [17.5s]
+    cardinality    4:    8,821 nodes  [28.1s]
+    cardinality    3:   24,982 nodes  [49.4s]
+    cardinality    2:   80,604 nodes  [87.3s]
+
+[Step 2] Building graph ...  [121.0s]
+  Extracting edges and 2-simplices ...  [121.0s]
+  Graph: 120,085 nodes, 3,749,501 edges, 11,993,096 triangles  [139.0s]
+
+[Step 3] Computing curvatures ...  [191.5s]
+  Euler characteristic chi = 8363680  [191.6s]
+  Computing edge Forman-Ricci curvatures ...  [191.6s]
+  Computing scalar curvatures ...  [198.1s]
+
+[Step 4] Writing outputs ...  [202.5s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_1.csv and outputs/population_nodes_curvature_chr_1.csv
+    119,896 loci written
+    189 loci written
+
+Finished.  chi = 8363680  [208.8s]
+Processing chr2...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr2.h5ad ...
+  Raw: 179 loci x 186,499 reads
+  IQR-filtering loci ...
+    degree range kept: [1588.2, 2442.2]  -> 174 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 174 loci x 110,545 reads
+
+[Step 1] Building poset complex ...  [3.4s]
+  Building node sets from H ...  [3.4s]
+  174 loci + 110,545 non-empty reads  [7.7s]
+  Building inverted index ...  [7.7s]
+  Computing Hasse diagram (k_max = 10) ...  [7.8s]
+    cardinality   10:       24 nodes  [7.8s]
+    cardinality    9:       69 nodes  [8.0s]
+    cardinality    8:      181 nodes  [8.4s]
+    cardinality    7:      422 nodes  [9.3s]
+    cardinality    6:    1,081 nodes  [11.2s]
+    cardinality    5:    2,802 nodes  [15.3s]
+    cardinality    4:    7,658 nodes  [23.9s]
+    cardinality    3:   22,431 nodes  [42.1s]
+    cardinality    2:   75,877 nodes  [75.7s]
+
+[Step 2] Building graph ...  [106.8s]
+  Extracting edges and 2-simplices ...  [106.8s]
+  Graph: 110,719 nodes, 3,671,003 edges, 12,279,865 triangles  [124.9s]
+
+[Step 3] Computing curvatures ...  [178.9s]
+  Euler characteristic chi = 8719581  [178.9s]
+  Computing edge Forman-Ricci curvatures ...  [178.9s]
+  Computing scalar curvatures ...  [185.5s]
+
+[Step 4] Writing outputs ...  [189.8s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_2.csv and outputs/population_nodes_curvature_chr_2.csv
+    110,545 loci written
+    174 loci written
+
+Finished.  chi = 8719581  [195.6s]
+Processing chr3...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr3.h5ad ...
+  Raw: 157 loci x 105,709 reads
+  IQR-filtering loci ...
+    degree range kept: [1334.5, 2090.5]  -> 156 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 156 loci x 105,099 reads
+
+[Step 1] Building poset complex ...  [3.0s]
+  Building node sets from H ...  [3.0s]
+  156 loci + 105,099 non-empty reads  [7.1s]
+  Building inverted index ...  [7.1s]
+  Computing Hasse diagram (k_max = 10) ...  [7.2s]
+    cardinality   10:       26 nodes  [7.2s]
+    cardinality    9:       83 nodes  [7.4s]
+    cardinality    8:      178 nodes  [7.9s]
+    cardinality    7:      450 nodes  [8.8s]
+    cardinality    6:    1,155 nodes  [10.9s]
+    cardinality    5:    3,059 nodes  [15.5s]
+    cardinality    4:    7,871 nodes  [25.1s]
+    cardinality    3:   21,960 nodes  [44.3s]
+    cardinality    2:   70,317 nodes  [78.4s]
+
+[Step 2] Building graph ...  [107.9s]
+  Extracting edges and 2-simplices ...  [107.9s]
+  Graph: 105,255 nodes, 3,783,575 edges, 12,999,496 triangles  [126.7s]
+
+[Step 3] Computing curvatures ...  [183.3s]
+  Euler characteristic chi = 9321176  [183.3s]
+  Computing edge Forman-Ricci curvatures ...  [183.3s]
+  Computing scalar curvatures ...  [190.0s]
+
+[Step 4] Writing outputs ...  [194.3s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_3.csv and outputs/population_nodes_curvature_chr_3.csv
+    105,099 loci written
+    156 loci written
+
+Finished.  chi = 9321176  [199.8s]
+Processing chr4...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr4.h5ad ...
+  Raw: 154 loci x 94,413 reads
+  IQR-filtering loci ...
+    degree range kept: [1060.0, 1906.0]  -> 149 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 149 loci x 86,902 reads
+
+[Step 1] Building poset complex ...  [3.0s]
+  Building node sets from H ...  [3.0s]
+  149 loci + 86,902 non-empty reads  [6.5s]
+  Building inverted index ...  [6.5s]
+  Computing Hasse diagram (k_max = 10) ...  [6.6s]
+    cardinality   10:       32 nodes  [6.6s]
+    cardinality    9:       45 nodes  [6.8s]
+    cardinality    8:      102 nodes  [7.0s]
+    cardinality    7:      298 nodes  [7.4s]
+    cardinality    6:      765 nodes  [8.5s]
+    cardinality    5:    2,100 nodes  [10.9s]
+    cardinality    4:    5,817 nodes  [16.3s]
+    cardinality    3:   17,678 nodes  [28.0s]
+    cardinality    2:   60,065 nodes  [50.0s]
+
+[Step 2] Building graph ...  [70.8s]
+  Extracting edges and 2-simplices ...  [70.8s]
+  Graph: 87,051 nodes, 3,011,863 edges, 10,983,045 triangles  [86.4s]
+
+[Step 3] Computing curvatures ...  [132.5s]
+  Euler characteristic chi = 8058233  [132.5s]
+  Computing edge Forman-Ricci curvatures ...  [132.5s]
+  Computing scalar curvatures ...  [137.8s]
+
+[Step 4] Writing outputs ...  [141.3s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_4.csv and outputs/population_nodes_curvature_chr_4.csv
+    86,902 loci written
+    149 loci written
+
+Finished.  chi = 8058233  [145.8s]
+Processing chr5...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr5.h5ad ...
+  Raw: 149 loci x 90,761 reads
+  IQR-filtering loci ...
+    degree range kept: [1149.5, 1905.5]  -> 146 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 146 loci x 89,748 reads
+
+[Step 1] Building poset complex ...  [2.8s]
+  Building node sets from H ...  [2.8s]
+  146 loci + 89,748 non-empty reads  [6.3s]
+  Building inverted index ...  [6.3s]
+  Computing Hasse diagram (k_max = 10) ...  [6.4s]
+    cardinality   10:       23 nodes  [6.4s]
+    cardinality    9:       43 nodes  [6.6s]
+    cardinality    8:      140 nodes  [6.8s]
+    cardinality    7:      304 nodes  [7.4s]
+    cardinality    6:      830 nodes  [8.6s]
+    cardinality    5:    2,323 nodes  [11.3s]
+    cardinality    4:    6,199 nodes  [17.7s]
+    cardinality    3:   18,493 nodes  [30.8s]
+    cardinality    2:   61,393 nodes  [55.2s]
+
+[Step 2] Building graph ...  [77.9s]
+  Extracting edges and 2-simplices ...  [77.9s]
+  Graph: 89,894 nodes, 3,078,302 edges, 10,620,662 triangles  [93.4s]
+
+[Step 3] Computing curvatures ...  [138.6s]
+  Euler characteristic chi = 7632254  [138.7s]
+  Computing edge Forman-Ricci curvatures ...  [138.7s]
+  Computing scalar curvatures ...  [144.0s]
+
+[Step 4] Writing outputs ...  [147.5s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_5.csv and outputs/population_nodes_curvature_chr_5.csv
+    89,748 loci written
+    146 loci written
+
+Finished.  chi = 7632254  [152.2s]
+Processing chr6...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr6.h5ad ...
+  Raw: 147 loci x 106,176 reads
+  IQR-filtering loci ...
+    degree range kept: [1305.0, 2181.0]  -> 145 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 145 loci x 98,313 reads
+
+[Step 1] Building poset complex ...  [2.6s]
+  Building node sets from H ...  [2.6s]
+  145 loci + 98,313 non-empty reads  [6.5s]
+  Building inverted index ...  [6.5s]
+  Computing Hasse diagram (k_max = 10) ...  [6.6s]
+    cardinality   10:       19 nodes  [6.6s]
+    cardinality    9:       55 nodes  [6.8s]
+    cardinality    8:      140 nodes  [7.1s]
+    cardinality    7:      369 nodes  [7.8s]
+    cardinality    6:      967 nodes  [9.4s]
+    cardinality    5:    2,525 nodes  [13.2s]
+    cardinality    4:    7,017 nodes  [20.9s]
+    cardinality    3:   20,027 nodes  [37.8s]
+    cardinality    2:   67,194 nodes  [68.6s]
+
+[Step 2] Building graph ...  [96.1s]
+  Extracting edges and 2-simplices ...  [96.1s]
+  Graph: 98,458 nodes, 3,682,283 edges, 13,414,473 triangles  [115.1s]
+
+[Step 3] Computing curvatures ...  [172.3s]
+  Euler characteristic chi = 9830648  [172.3s]
+  Computing edge Forman-Ricci curvatures ...  [172.3s]
+  Computing scalar curvatures ...  [178.8s]
+
+[Step 4] Writing outputs ...  [183.1s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_6.csv and outputs/population_nodes_curvature_chr_6.csv
+    98,313 loci written
+    145 loci written
+
+Finished.  chi = 9830648  [188.2s]
+Processing chr7...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr7.h5ad ...
+  Raw: 142 loci x 85,534 reads
+  IQR-filtering loci ...
+    degree range kept: [1111.5, 1931.5]  -> 132 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 132 loci x 77,925 reads
+
+[Step 1] Building poset complex ...  [3.1s]
+  Building node sets from H ...  [3.1s]
+  132 loci + 77,925 non-empty reads  [6.2s]
+  Building inverted index ...  [6.2s]
+  Computing Hasse diagram (k_max = 10) ...  [6.3s]
+    cardinality   10:       21 nodes  [6.3s]
+    cardinality    9:       31 nodes  [6.4s]
+    cardinality    8:      107 nodes  [6.6s]
+    cardinality    7:      257 nodes  [7.0s]
+    cardinality    6:      767 nodes  [7.9s]
+    cardinality    5:    2,020 nodes  [10.3s]
+    cardinality    4:    5,313 nodes  [15.5s]
+    cardinality    3:   15,875 nodes  [26.1s]
+    cardinality    2:   53,534 nodes  [45.8s]
+
+[Step 2] Building graph ...  [64.8s]
+  Extracting edges and 2-simplices ...  [64.8s]
+  Graph: 78,057 nodes, 2,659,638 edges, 9,042,853 triangles  [77.7s]
+
+[Step 3] Computing curvatures ...  [116.2s]
+  Euler characteristic chi = 6461272  [116.2s]
+  Computing edge Forman-Ricci curvatures ...  [116.2s]
+  Computing scalar curvatures ...  [120.8s]
+
+[Step 4] Writing outputs ...  [123.8s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_7.csv and outputs/population_nodes_curvature_chr_7.csv
+    77,925 loci written
+    132 loci written
+
+Finished.  chi = 6461272  [127.9s]
+Processing chr8...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr8.h5ad ...
+  Raw: 128 loci x 101,982 reads
+  IQR-filtering loci ...
+    degree range kept: [1420.1, 2369.1]  -> 124 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 124 loci x 91,738 reads
+
+[Step 1] Building poset complex ...  [1.0s]
+  Building node sets from H ...  [1.0s]
+  124 loci + 91,738 non-empty reads  [4.7s]
+  Building inverted index ...  [4.7s]
+  Computing Hasse diagram (k_max = 10) ...  [4.8s]
+    cardinality   10:       14 nodes  [4.8s]
+    cardinality    9:       59 nodes  [4.9s]
+    cardinality    8:      118 nodes  [5.2s]
+    cardinality    7:      325 nodes  [5.8s]
+    cardinality    6:      896 nodes  [7.4s]
+    cardinality    5:    2,362 nodes  [11.2s]
+    cardinality    4:    6,466 nodes  [19.1s]
+    cardinality    3:   18,513 nodes  [35.9s]
+    cardinality    2:   62,985 nodes  [67.7s]
+
+[Step 2] Building graph ...  [96.2s]
+  Extracting edges and 2-simplices ...  [96.2s]
+  Graph: 91,862 nodes, 3,995,809 edges, 16,026,448 triangles  [118.5s]
+
+[Step 3] Computing curvatures ...  [188.4s]
+  Euler characteristic chi = 12122501  [188.4s]
+  Computing edge Forman-Ricci curvatures ...  [188.4s]
+  Computing scalar curvatures ...  [195.7s]
+
+[Step 4] Writing outputs ...  [200.4s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_8.csv and outputs/population_nodes_curvature_chr_8.csv
+    91,738 loci written
+    124 loci written
+
+Finished.  chi = 12122501  [205.3s]
+Processing chr9...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr9.h5ad ...
+  Raw: 122 loci x 113,804 reads
+  IQR-filtering loci ...
+    degree range kept: [1407.4, 2076.4]  -> 118 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 118 loci x 68,280 reads
+
+[Step 1] Building poset complex ...  [3.0s]
+  Building node sets from H ...  [3.0s]
+  118 loci + 68,280 non-empty reads  [5.8s]
+  Building inverted index ...  [5.8s]
+  Computing Hasse diagram (k_max = 10) ...  [5.8s]
+    cardinality   10:       12 nodes  [5.8s]
+    cardinality    9:       26 nodes  [5.9s]
+    cardinality    8:       57 nodes  [6.0s]
+    cardinality    7:      232 nodes  [6.2s]
+    cardinality    6:      551 nodes  [6.9s]
+    cardinality    5:    1,481 nodes  [8.5s]
+    cardinality    4:    4,381 nodes  [11.9s]
+    cardinality    3:   13,094 nodes  [19.8s]
+    cardinality    2:   48,446 nodes  [34.7s]
+
+[Step 2] Building graph ...  [50.5s]
+  Extracting edges and 2-simplices ...  [50.5s]
+  Graph: 68,398 nodes, 2,529,337 edges, 9,303,595 triangles  [63.3s]
+
+[Step 3] Computing curvatures ...  [101.3s]
+  Euler characteristic chi = 6842656  [101.3s]
+  Computing edge Forman-Ricci curvatures ...  [101.3s]
+  Computing scalar curvatures ...  [105.5s]
+
+[Step 4] Writing outputs ...  [108.4s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_9.csv and outputs/population_nodes_curvature_chr_9.csv
+    68,280 loci written
+    118 loci written
+
+Finished.  chi = 6842656  [111.9s]
+Processing chr10...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr10.h5ad ...
+  Raw: 128 loci x 73,972 reads
+  IQR-filtering loci ...
+    degree range kept: [1168.8, 1708.8]  -> 124 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 124 loci x 71,140 reads
+
+[Step 1] Building poset complex ...  [0.7s]
+  Building node sets from H ...  [0.7s]
+  124 loci + 71,140 non-empty reads  [3.6s]
+  Building inverted index ...  [3.6s]
+  Computing Hasse diagram (k_max = 10) ...  [3.7s]
+    cardinality   10:       19 nodes  [3.7s]
+    cardinality    9:       34 nodes  [3.8s]
+    cardinality    8:       86 nodes  [3.9s]
+    cardinality    7:      217 nodes  [4.2s]
+    cardinality    6:      662 nodes  [4.9s]
+    cardinality    5:    1,641 nodes  [6.8s]
+    cardinality    4:    4,850 nodes  [10.6s]
+    cardinality    3:   14,347 nodes  [19.4s]
+    cardinality    2:   49,284 nodes  [35.6s]
+
+[Step 2] Building graph ...  [51.8s]
+  Extracting edges and 2-simplices ...  [51.8s]
+  Graph: 71,264 nodes, 2,524,638 edges, 9,064,150 triangles  [64.4s]
+
+[Step 3] Computing curvatures ...  [101.6s]
+  Euler characteristic chi = 6610776  [101.6s]
+  Computing edge Forman-Ricci curvatures ...  [101.6s]
+  Computing scalar curvatures ...  [105.9s]
+
+[Step 4] Writing outputs ...  [108.7s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_10.csv and outputs/population_nodes_curvature_chr_10.csv
+    71,140 loci written
+    124 loci written
+
+Finished.  chi = 6610776  [112.4s]
+Processing chr11...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr11.h5ad ...
+  Raw: 119 loci x 73,370 reads
+  IQR-filtering loci ...
+    degree range kept: [1150.8, 1852.8]  -> 117 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 117 loci x 71,125 reads
+
+[Step 1] Building poset complex ...  [2.6s]
+  Building node sets from H ...  [2.6s]
+  117 loci + 71,125 non-empty reads  [5.5s]
+  Building inverted index ...  [5.5s]
+  Computing Hasse diagram (k_max = 10) ...  [5.5s]
+    cardinality   10:       15 nodes  [5.5s]
+    cardinality    9:       27 nodes  [5.6s]
+    cardinality    8:       59 nodes  [5.7s]
+    cardinality    7:      161 nodes  [5.9s]
+    cardinality    6:      496 nodes  [6.5s]
+    cardinality    5:    1,408 nodes  [8.0s]
+    cardinality    4:    4,450 nodes  [11.5s]
+    cardinality    3:   13,755 nodes  [20.1s]
+    cardinality    2:   50,754 nodes  [36.9s]
+
+[Step 2] Building graph ...  [54.1s]
+  Extracting edges and 2-simplices ...  [54.1s]
+  Graph: 71,242 nodes, 2,576,804 edges, 9,741,113 triangles  [67.5s]
+
+[Step 3] Computing curvatures ...  [107.0s]
+  Euler characteristic chi = 7235551  [107.0s]
+  Computing edge Forman-Ricci curvatures ...  [107.0s]
+  Computing scalar curvatures ...  [111.4s]
+
+[Step 4] Writing outputs ...  [114.3s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_11.csv and outputs/population_nodes_curvature_chr_11.csv
+    71,125 loci written
+    117 loci written
+
+Finished.  chi = 7235551  [118.1s]
+Processing chr12...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr12.h5ad ...
+  Raw: 117 loci x 67,384 reads
+  IQR-filtering loci ...
+    degree range kept: [1072.0, 1744.0]  -> 112 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 112 loci x 62,020 reads
+
+[Step 1] Building poset complex ...  [2.7s]
+  Building node sets from H ...  [2.7s]
+  112 loci + 62,020 non-empty reads  [5.2s]
+  Building inverted index ...  [5.2s]
+  Computing Hasse diagram (k_max = 10) ...  [5.3s]
+    cardinality   10:       11 nodes  [5.3s]
+    cardinality    9:       23 nodes  [5.3s]
+    cardinality    8:       55 nodes  [5.4s]
+    cardinality    7:      172 nodes  [5.6s]
+    cardinality    6:      538 nodes  [6.1s]
+    cardinality    5:    1,496 nodes  [7.5s]
+    cardinality    4:    4,165 nodes  [10.9s]
+    cardinality    3:   12,443 nodes  [18.1s]
+    cardinality    2:   43,117 nodes  [31.6s]
+
+[Step 2] Building graph ...  [45.3s]
+  Extracting edges and 2-simplices ...  [45.3s]
+  Graph: 62,132 nodes, 2,265,869 edges, 8,020,424 triangles  [56.6s]
+
+[Step 3] Computing curvatures ...  [89.8s]
+  Euler characteristic chi = 5816687  [89.9s]
+  Computing edge Forman-Ricci curvatures ...  [89.9s]
+  Computing scalar curvatures ...  [93.7s]
+
+[Step 4] Writing outputs ...  [96.3s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_12.csv and outputs/population_nodes_curvature_chr_12.csv
+    62,020 loci written
+    112 loci written
+
+Finished.  chi = 5816687  [99.6s]
+Processing chr13...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr13.h5ad ...
+  Raw: 118 loci x 69,376 reads
+  IQR-filtering loci ...
+    degree range kept: [1133.8, 1741.8]  -> 113 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 113 loci x 64,714 reads
+
+[Step 1] Building poset complex ...  [2.7s]
+  Building node sets from H ...  [2.7s]
+  113 loci + 64,714 non-empty reads  [5.4s]
+  Building inverted index ...  [5.4s]
+  Computing Hasse diagram (k_max = 10) ...  [5.4s]
+    cardinality   10:       12 nodes  [5.4s]
+    cardinality    9:       28 nodes  [5.5s]
+    cardinality    8:       71 nodes  [5.6s]
+    cardinality    7:      196 nodes  [5.8s]
+    cardinality    6:      495 nodes  [6.4s]
+    cardinality    5:    1,448 nodes  [7.8s]
+    cardinality    4:    4,182 nodes  [11.1s]
+    cardinality    3:   12,929 nodes  [18.5s]
+    cardinality    2:   45,353 nodes  [32.9s]
+
+[Step 2] Building graph ...  [47.6s]
+  Extracting edges and 2-simplices ...  [47.6s]
+  Graph: 64,827 nodes, 2,487,215 edges, 9,541,411 triangles  [60.6s]
+
+[Step 3] Computing curvatures ...  [99.7s]
+  Euler characteristic chi = 7119023  [99.7s]
+  Computing edge Forman-Ricci curvatures ...  [99.7s]
+  Computing scalar curvatures ...  [103.9s]
+
+[Step 4] Writing outputs ...  [106.7s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_13.csv and outputs/population_nodes_curvature_chr_13.csv
+    64,714 loci written
+    113 loci written
+
+Finished.  chi = 7119023  [110.0s]
+Processing chr14...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr14.h5ad ...
+  Raw: 123 loci x 77,434 reads
+  IQR-filtering loci ...
+    degree range kept: [1057.0, 1893.0]  -> 111 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 111 loci x 61,892 reads
+
+[Step 1] Building poset complex ...  [2.4s]
+  Building node sets from H ...  [2.4s]
+  111 loci + 61,892 non-empty reads  [4.9s]
+  Building inverted index ...  [4.9s]
+  Computing Hasse diagram (k_max = 10) ...  [5.0s]
+    cardinality   10:       11 nodes  [5.0s]
+    cardinality    9:       31 nodes  [5.0s]
+    cardinality    8:       74 nodes  [5.1s]
+    cardinality    7:      200 nodes  [5.4s]
+    cardinality    6:      487 nodes  [6.0s]
+    cardinality    5:    1,459 nodes  [7.3s]
+    cardinality    4:    4,160 nodes  [10.6s]
+    cardinality    3:   12,545 nodes  [17.9s]
+    cardinality    2:   42,925 nodes  [31.8s]
+
+[Step 2] Building graph ...  [45.6s]
+  Extracting edges and 2-simplices ...  [45.6s]
+  Graph: 62,003 nodes, 2,281,465 edges, 8,693,895 triangles  [57.7s]
+
+[Step 3] Computing curvatures ...  [93.5s]
+  Euler characteristic chi = 6474433  [93.5s]
+  Computing edge Forman-Ricci curvatures ...  [93.5s]
+  Computing scalar curvatures ...  [97.5s]
+
+[Step 4] Writing outputs ...  [100.0s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_14.csv and outputs/population_nodes_curvature_chr_14.csv
+    61,892 loci written
+    111 loci written
+
+Finished.  chi = 6474433  [103.3s]
+Processing chr15...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr15.h5ad ...
+  Raw: 101 loci x 54,987 reads
+  IQR-filtering loci ...
+    degree range kept: [980.5, 1704.5]  -> 101 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 101 loci x 54,978 reads
+
+[Step 1] Building poset complex ...  [1.9s]
+  Building node sets from H ...  [1.9s]
+  101 loci + 54,978 non-empty reads  [4.1s]
+  Building inverted index ...  [4.1s]
+  Computing Hasse diagram (k_max = 10) ...  [4.2s]
+    cardinality   10:        8 nodes  [4.2s]
+    cardinality    9:       16 nodes  [4.2s]
+    cardinality    8:       59 nodes  [4.2s]
+    cardinality    7:      182 nodes  [4.4s]
+    cardinality    6:      459 nodes  [4.9s]
+    cardinality    5:    1,260 nodes  [6.0s]
+    cardinality    4:    3,550 nodes  [8.5s]
+    cardinality    3:   10,837 nodes  [14.0s]
+    cardinality    2:   38,607 nodes  [24.8s]
+
+[Step 2] Building graph ...  [35.9s]
+  Extracting edges and 2-simplices ...  [35.9s]
+  Graph: 55,079 nodes, 2,063,166 edges, 7,501,252 triangles  [46.3s]
+
+[Step 3] Computing curvatures ...  [75.9s]
+  Euler characteristic chi = 5493165  [76.0s]
+  Computing edge Forman-Ricci curvatures ...  [76.0s]
+  Computing scalar curvatures ...  [79.3s]
+
+[Step 4] Writing outputs ...  [81.7s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_15.csv and outputs/population_nodes_curvature_chr_15.csv
+    54,978 loci written
+    101 loci written
+
+Finished.  chi = 5493165  [84.5s]
+Processing chr16...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr16.h5ad ...
+  Raw: 95 loci x 50,712 reads
+  IQR-filtering loci ...
+    degree range kept: [1047.2, 1565.2]  -> 94 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 94 loci x 49,848 reads
+
+[Step 1] Building poset complex ...  [2.3s]
+  Building node sets from H ...  [2.3s]
+  94 loci + 49,848 non-empty reads  [4.3s]
+  Building inverted index ...  [4.3s]
+  Computing Hasse diagram (k_max = 10) ...  [4.4s]
+    cardinality   10:       13 nodes  [4.4s]
+    cardinality    9:       16 nodes  [4.4s]
+    cardinality    8:       49 nodes  [4.5s]
+    cardinality    7:      130 nodes  [4.6s]
+    cardinality    6:      384 nodes  [5.0s]
+    cardinality    5:    1,061 nodes  [5.8s]
+    cardinality    4:    3,205 nodes  [7.8s]
+    cardinality    3:    9,758 nodes  [12.6s]
+    cardinality    2:   35,232 nodes  [22.1s]
+
+[Step 2] Building graph ...  [32.0s]
+  Extracting edges and 2-simplices ...  [32.0s]
+  Graph: 49,942 nodes, 1,840,251 edges, 6,761,207 triangles  [41.1s]
+
+[Step 3] Computing curvatures ...  [68.3s]
+  Euler characteristic chi = 4970898  [68.3s]
+  Computing edge Forman-Ricci curvatures ...  [68.3s]
+  Computing scalar curvatures ...  [71.4s]
+
+[Step 4] Writing outputs ...  [73.5s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_16.csv and outputs/population_nodes_curvature_chr_16.csv
+    49,848 loci written
+    94 loci written
+
+Finished.  chi = 4970898  [76.1s]
+Processing chr17...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr17.h5ad ...
+  Raw: 93 loci x 49,849 reads
+  IQR-filtering loci ...
+    degree range kept: [931.5, 1695.5]  -> 92 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 92 loci x 49,692 reads
+
+[Step 1] Building poset complex ...  [1.8s]
+  Building node sets from H ...  [1.8s]
+  92 loci + 49,692 non-empty reads  [3.9s]
+  Building inverted index ...  [3.9s]
+  Computing Hasse diagram (k_max = 10) ...  [3.9s]
+    cardinality   10:       11 nodes  [3.9s]
+    cardinality    9:       19 nodes  [4.0s]
+    cardinality    8:       36 nodes  [4.0s]
+    cardinality    7:      135 nodes  [4.1s]
+    cardinality    6:      398 nodes  [4.4s]
+    cardinality    5:    1,066 nodes  [5.3s]
+    cardinality    4:    3,128 nodes  [7.3s]
+    cardinality    3:    9,504 nodes  [11.8s]
+    cardinality    2:   35,395 nodes  [20.9s]
+
+[Step 2] Building graph ...  [30.6s]
+  Extracting edges and 2-simplices ...  [30.6s]
+  Graph: 49,784 nodes, 2,015,132 edges, 8,353,582 triangles  [41.4s]
+
+[Step 3] Computing curvatures ...  [73.9s]
+  Euler characteristic chi = 6388234  [74.0s]
+  Computing edge Forman-Ricci curvatures ...  [74.0s]
+  Computing scalar curvatures ...  [77.3s]
+
+[Step 4] Writing outputs ...  [79.5s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_17.csv and outputs/population_nodes_curvature_chr_17.csv
+    49,692 loci written
+    92 loci written
+
+Finished.  chi = 6388234  [82.1s]
+Processing chr18...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr18.h5ad ...
+  Raw: 88 loci x 46,230 reads
+  IQR-filtering loci ...
+    degree range kept: [1029.6, 1560.6]  -> 87 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 87 loci x 45,808 reads
+
+[Step 1] Building poset complex ...  [1.8s]
+  Building node sets from H ...  [1.8s]
+  87 loci + 45,808 non-empty reads  [3.7s]
+  Building inverted index ...  [3.7s]
+  Computing Hasse diagram (k_max = 10) ...  [3.7s]
+    cardinality   10:        7 nodes  [3.7s]
+    cardinality    9:       23 nodes  [3.7s]
+    cardinality    8:       44 nodes  [3.8s]
+    cardinality    7:      137 nodes  [3.9s]
+    cardinality    6:      359 nodes  [4.3s]
+    cardinality    5:    1,070 nodes  [5.0s]
+    cardinality    4:    2,953 nodes  [6.9s]
+    cardinality    3:    9,098 nodes  [11.0s]
+    cardinality    2:   32,117 nodes  [19.3s]
+
+[Step 2] Building graph ...  [27.8s]
+  Extracting edges and 2-simplices ...  [27.8s]
+  Graph: 45,895 nodes, 1,798,512 edges, 6,687,599 triangles  [36.7s]
+
+[Step 3] Computing curvatures ...  [62.8s]
+  Euler characteristic chi = 4934982  [62.8s]
+  Computing edge Forman-Ricci curvatures ...  [62.8s]
+  Computing scalar curvatures ...  [65.7s]
+
+[Step 4] Writing outputs ...  [67.7s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_18.csv and outputs/population_nodes_curvature_chr_18.csv
+    45,808 loci written
+    87 loci written
+
+Finished.  chi = 4934982  [70.1s]
+Processing chr19...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chr19.h5ad ...
+  Raw: 59 loci x 27,852 reads
+  IQR-filtering loci ...
+    degree range kept: [798.5, 1478.5]  -> 58 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 58 loci x 27,585 reads
+
+[Step 1] Building poset complex ...  [1.1s]
+  Building node sets from H ...  [1.1s]
+  58 loci + 27,585 non-empty reads  [2.2s]
+  Building inverted index ...  [2.2s]
+  Computing Hasse diagram (k_max = 10) ...  [2.2s]
+    cardinality   10:        4 nodes  [2.2s]
+    cardinality    9:        6 nodes  [2.2s]
+    cardinality    8:       15 nodes  [2.2s]
+    cardinality    7:       54 nodes  [2.3s]
+    cardinality    6:      146 nodes  [2.4s]
+    cardinality    5:      508 nodes  [2.6s]
+    cardinality    4:    1,508 nodes  [3.2s]
+    cardinality    3:    5,223 nodes  [4.7s]
+    cardinality    2:   20,121 nodes  [8.4s]
+
+[Step 2] Building graph ...  [12.2s]
+  Extracting edges and 2-simplices ...  [12.2s]
+  Graph: 27,643 nodes, 1,140,671 edges, 4,141,165 triangles  [17.7s]
+
+[Step 3] Computing curvatures ...  [33.5s]
+  Euler characteristic chi = 3028137  [33.5s]
+  Computing edge Forman-Ricci curvatures ...  [33.5s]
+  Computing scalar curvatures ...  [35.3s]
+
+[Step 4] Writing outputs ...  [36.5s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_19.csv and outputs/population_nodes_curvature_chr_19.csv
+    27,585 loci written
+    58 loci written
+
+Finished.  chi = 3028137  [38.0s]
+Processing chrX...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/population_mESC_1000000_chrX.h5ad ...
+  Raw: 167 loci x 47,286 reads
+  IQR-filtering loci ...
+    degree range kept: [531.0, 859.0]  -> 148 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 148 loci x 38,512 reads
+
+[Step 1] Building poset complex ...  [2.1s]
+  Building node sets from H ...  [2.1s]
+  148 loci + 38,512 non-empty reads  [3.6s]
+  Building inverted index ...  [3.6s]
+  Computing Hasse diagram (k_max = 10) ...  [3.7s]
+    cardinality   10:        9 nodes  [3.7s]
+    cardinality    9:       20 nodes  [3.7s]
+    cardinality    8:       75 nodes  [3.7s]
+    cardinality    7:      168 nodes  [3.8s]
+    cardinality    6:      384 nodes  [4.0s]
+    cardinality    5:    1,003 nodes  [4.4s]
+    cardinality    4:    2,901 nodes  [5.3s]
+    cardinality    3:    8,041 nodes  [7.2s]
+    cardinality    2:   25,911 nodes  [10.4s]
+
+[Step 2] Building graph ...  [13.8s]
+  Extracting edges and 2-simplices ...  [13.8s]
+  Graph: 38,660 nodes, 771,246 edges, 1,865,090 triangles  [16.7s]
+
+[Step 3] Computing curvatures ...  [24.6s]
+  Euler characteristic chi = 1132504  [24.6s]
+  Computing edge Forman-Ricci curvatures ...  [24.6s]
+  Computing scalar curvatures ...  [25.9s]
+
+[Step 4] Writing outputs ...  [26.9s]
+  Writing locus node CSV -> outputs/population_edges_curvature_chr_X.csv and outputs/population_nodes_curvature_chr_X.csv
+    38,512 loci written
+    148 loci written
+
+Finished.  chi = 1132504  [28.9s]

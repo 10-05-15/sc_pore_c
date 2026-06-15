@@ -1,0 +1,16 @@
+/scratch/indikar_root/indikar1/jduhamel/conda-envs/pore_c/lib/python3.13/site-packages/anndata/logging.py:57: FutureWarning: The specified parameters ('newline',) are no longer positional. Please specify them like `newline=False`
+  print(format_memory_usage(get_memory_usage(), msg, newline))
+Traceback (most recent call last):
+  File "/home/jduhamel/sc_pore_c/notebooks/utilities/gather_matrix.py", line 51, in <module>
+    matrix_v2.expand_and_normalize_anndata(bdata, oe_kr=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/jduhamel/sc_pore_c/notebooks/utilities/matrix_v2.py", line 47, in expand_and_normalize_anndata
+    H = adata.to_df()
+  File "/scratch/indikar_root/indikar1/jduhamel/conda-envs/pore_c/lib/python3.13/site-packages/anndata/_core/anndata.py", line 1276, in to_df
+    X = X.toarray()
+  File "/scratch/indikar_root/indikar1/jduhamel/conda-envs/pore_c/lib/python3.13/site-packages/scipy/sparse/_compressed.py", line 996, in toarray
+    out = self._process_toarray_args(order, out)
+  File "/scratch/indikar_root/indikar1/jduhamel/conda-envs/pore_c/lib/python3.13/site-packages/scipy/sparse/_base.py", line 1530, in _process_toarray_args
+    return np.zeros(self.shape, dtype=self.dtype, order=order)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 625. GiB for an array with shape (2579, 32545444) and data type int64

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/jduhamel/sc_pore_c/notebooks/utilities/calculations/curvature.py", line 425, in <module>
+    main()
+    ~~~~^^
+  File "/home/jduhamel/sc_pore_c/notebooks/utilities/calculations/curvature.py", line 419, in main
+    write_node_csv(G, scalar, n_loci, adata, obs_idx, arge.edge_csv, args.node_csv)
+                                                      ^^^^
+NameError: name 'arge' is not defined. Did you mean: 'args'?

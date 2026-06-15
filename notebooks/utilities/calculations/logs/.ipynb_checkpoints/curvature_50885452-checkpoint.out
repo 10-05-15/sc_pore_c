@@ -1,0 +1,135 @@
+
+Job information
+#-------------------------------------------------------------------
+SLURM_SUBMIT_HOST    gl0004.arc-ts.umich.edu
+SLURM_JOB_ACCOUNT    indikar0
+SLURM_JOB_PARTITION  standard
+SLURM_JOB_NAME       curvature_sc_chr
+SLURM_JOBID          50885452
+SLURM_NODELIST       gl3075
+SLURM_JOB_NUM_NODES  1
+SLURM_NTASKS         1
+SLURM_TASKS_PER_NODE 1
+SLURM_CPUS_PER_TASK  3
+SLURM_NPROCS         1
+SLURM_MEM_PER_CPU    
+SLURM_SUBMIT_DIR     /home/jduhamel/sc_pore_c/notebooks/utilities/calculations
+
+scheduling priority             (-e) 0
+pending signals                 (-i) 765366
+max memory size         (kbytes, -m) 67108864
+open files                      (-n) 131072
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+max user processes              (-u) 765366
+
+Running on gl3075.arc-ts.umich.edu at Mon May 25 20:35:44 EDT 2026
+
+Currently Loaded Modules:
+  1) mamba/py3.12
+
+Your job output begins below the line
+#-------------------------------------------------------------------
+Processing chr1...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/singlecell_mESC_1000000_chr1.h5ad ...
+  Raw: 193 loci x 901,055 reads
+  IQR-filtering loci ...
+    degree range kept: [673.0, 18385.0]  -> 184 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 184 loci x 732,505 reads
+
+[Step 1] Building poset complex ...  [13.3s]
+  Building node sets from H ...  [13.3s]
+  184 loci + 732,505 non-empty reads  [44.3s]
+  Building inverted index ...  [44.3s]
+  Computing Hasse diagram (k_max = 6) ...  [46.2s]
+    cardinality    6:       10 nodes  [46.2s]
+    cardinality    5:       51 nodes  [46.4s]
+    cardinality    4:   10,105 nodes  [47.0s]
+    cardinality    3:   63,696 nodes  [159.6s]
+    cardinality    2:  658,643 nodes  [676.1s]
+
+[Step 2] Building graph ...  [1902.0s]
+  Extracting edges and 2-simplices ...  [1902.0s]
+Processing chr2...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/singlecell_mESC_1000000_chr2.h5ad ...
+  Raw: 179 loci x 1,865,516 reads
+  IQR-filtering loci ...
+    degree range kept: [1209.8, 30599.8]  -> 171 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 171 loci x 807,915 reads
+
+[Step 1] Building poset complex ...  [16.9s]
+  Building node sets from H ...  [16.9s]
+  171 loci + 807,915 non-empty reads  [51.3s]
+  Building inverted index ...  [51.3s]
+  Computing Hasse diagram (k_max = 8) ...  [52.9s]
+    cardinality    8:      302 nodes  [52.9s]
+    cardinality    7:        7 nodes  [62.5s]
+    cardinality    6:       41 nodes  [62.8s]
+    cardinality    5:      443 nodes  [63.6s]
+    cardinality    4:   11,785 nodes  [72.0s]
+    cardinality    3:   81,813 nodes  [272.6s]
+    cardinality    2:  713,524 nodes  [1294.7s]
+
+[Step 2] Building graph ...  [2950.5s]
+  Extracting edges and 2-simplices ...  [2950.5s]
+Processing chr3...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/singlecell_mESC_1000000_chr3.h5ad ...
+  Raw: 157 loci x 686,031 reads
+  IQR-filtering loci ...
+    degree range kept: [-1226.5, 17665.5]  -> 147 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 147 loci x 505,745 reads
+
+[Step 1] Building poset complex ...  [5.9s]
+  Building node sets from H ...  [5.9s]
+  147 loci + 505,745 non-empty reads  [27.2s]
+  Building inverted index ...  [27.2s]
+  Computing Hasse diagram (k_max = 6) ...  [28.0s]
+    cardinality    6:      109 nodes  [28.0s]
+    cardinality    5:       88 nodes  [29.8s]
+    cardinality    4:      871 nodes  [30.9s]
+    cardinality    3:   35,575 nodes  [39.6s]
+    cardinality    2:  469,102 nodes  [290.8s]
+
+[Step 2] Building graph ...  [934.7s]
+  Extracting edges and 2-simplices ...  [934.7s]
+  Graph: 505,892 nodes, 26,243,951 edges, 73,418,872 triangles  [1071.7s]
+
+[Step 3] Computing curvatures ...  [1558.6s]
+  Euler characteristic chi = 47680813  [1558.9s]
+  Computing edge Forman-Ricci curvatures ...  [1558.9s]
+  Computing scalar curvatures ...  [1607.1s]
+
+[Step 4] Writing outputs ...  [1639.0s]
+  Writing locus node CSV -> outputs/singlecell_edges_curvature_chr_3.csv and outputs/singlecell_nodes_curvature_chr_3.csv
+    505,745 loci written
+    147 loci written
+
+Finished.  chi = 47680813  [1666.5s]
+Processing chr4...
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/by_chromosome/singlecell_mESC_1000000_chr4.h5ad ...
+  Raw: 154 loci x 594,194 reads
+  IQR-filtering loci ...
+    degree range kept: [-881.6, 15809.4]  -> 150 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 150 loci x 511,744 reads
+
+[Step 1] Building poset complex ...  [10.3s]
+  Building node sets from H ...  [10.3s]
+  150 loci + 511,744 non-empty reads  [32.2s]
+  Building inverted index ...  [32.2s]
+  Computing Hasse diagram (k_max = 5) ...  [33.0s]
+    cardinality    5:        8 nodes  [33.0s]
+    cardinality    4:    3,133 nodes  [33.1s]
+    cardinality    3:   40,327 nodes  [62.5s]

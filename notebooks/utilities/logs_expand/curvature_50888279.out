@@ -1,0 +1,39 @@
+
+Job information
+#-------------------------------------------------------------------
+SLURM_SUBMIT_HOST    gl0004.arc-ts.umich.edu
+SLURM_JOB_ACCOUNT    indikar0
+SLURM_JOB_PARTITION  standard
+SLURM_JOB_NAME       expand_sc
+SLURM_JOBID          50888279
+SLURM_NODELIST       gl3154
+SLURM_JOB_NUM_NODES  1
+SLURM_NTASKS         1
+SLURM_TASKS_PER_NODE 1
+SLURM_CPUS_PER_TASK  5
+SLURM_NPROCS         1
+SLURM_MEM_PER_CPU    
+SLURM_SUBMIT_DIR     /home/jduhamel/sc_pore_c/notebooks/utilities
+
+scheduling priority             (-e) 0
+pending signals                 (-i) 765366
+max memory size         (kbytes, -m) 157286400
+open files                      (-n) 131072
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+max user processes              (-u) 765366
+
+Running on gl3154.arc-ts.umich.edu at Mon May 25 23:15:06 EDT 2026
+
+Currently Loaded Modules:
+  1) mamba/py3.12
+
+Your job output begins below the line
+#-------------------------------------------------------------------
+singlecell_path='/nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/anndata/singlecell_mESC_1000000_features.h5ad'
+Time taken to read the file: 220.40 seconds
+Memory usage: current 27.23 GB, difference +27.23 GB
+Expanding input matrix...
+Error:  Unable to allocate 625. GiB for an array with shape (2579, 32545444) and data type int64
+Complete

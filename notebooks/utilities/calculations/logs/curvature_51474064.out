@@ -1,0 +1,39 @@
+[Step 0] Loading and filtering H ...
+Loading /scratch/indikar_root/indikar1/jduhamel/population_mESC_1000000_features_inter.h5ad ...
+  Raw: 2,335 loci x 1,606,141 reads
+  IQR-filtering loci ...
+    degree range kept: [1818.0, 3366.0]  -> 2,330 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 2,330 loci x 1,603,832 reads
+
+[Step 1] Building poset complex ...  [15.8s]
+  Building node sets from H ...  [15.8s]
+  2,330 loci + 1,603,832 non-empty reads  [92.4s]
+  Building inverted index ...  [92.4s]
+  Computing Hasse diagram (k_max = 10) ...  [100.9s]
+    cardinality   10:   14,587 nodes  [100.9s]
+    cardinality    9:   23,885 nodes  [498.6s]
+    cardinality    8:   38,840 nodes  [1081.3s]
+    cardinality    7:   65,104 nodes  [1896.1s]
+    cardinality    6:  109,252 nodes  [3015.4s]
+    cardinality    5:  183,651 nodes  [4555.5s]
+    cardinality    4:  293,765 nodes  [6733.4s]
+    cardinality    3:  421,121 nodes  [9064.2s]
+    cardinality    2:  453,627 nodes  [10865.3s]
+
+[Step 2] Building graph ...  [11903.5s]
+  Extracting edges and 2-simplices ...  [11903.5s]
+  Graph: 1,606,162 nodes, 7,666,376 edges, 3,254,114 triangles  [11934.1s]
+
+[Step 3] Computing curvatures ...  [11972.2s]
+  Euler characteristic chi = -2806100  [11972.9s]
+  Computing edge Forman-Ricci curvatures ...  [11972.9s]
+  Computing scalar curvatures ...  [11992.8s]
+
+[Step 4] Writing outputs ...  [12010.8s]
+  Writing locus node CSV -> outputs/edges_curvature_inter_only.csv and outputs/nodes_curvature_inter_only.csv
+    1,603,832 loci written
+    2,330 loci written
+
+Finished.  chi = -2806100  [12152.4s]

@@ -1,0 +1,34 @@
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/anndata/population_mESC_1000000_features.h5ad ...
+  Raw: 2,579 loci x 2,756,467 reads
+  IQR-filtering loci ...
+    degree range kept: [2420.5, 4392.5]  -> 2,335 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 2,335 loci x 2,039,865 reads
+
+[Step 1] Building poset complex ...  [23.2s]
+  Building node sets from H ...  [23.2s]
+  2,335 loci + 2,039,865 non-empty reads  [111.4s]
+  Building inverted index ...  [111.4s]
+  Computing Hasse diagram (k_max = 10) ...  [118.8s]
+    cardinality   10:   14,927 nodes  [118.8s]
+    cardinality    9:   24,150 nodes  [498.9s]
+    cardinality    8:   39,415 nodes  [1048.0s]
+    cardinality    7:   66,490 nodes  [1848.3s]
+    cardinality    6:  112,824 nodes  [3019.7s]
+    cardinality    5:  193,731 nodes  [4661.4s]
+    cardinality    4:  324,270 nodes  [6786.4s]
+    cardinality    3:  516,472 nodes  [9120.5s]
+    cardinality    2:  747,586 nodes  [11422.7s]
+
+[Step 2] Building graph ...  [13096.1s]
+  Extracting edges and 2-simplices ...  [13096.1s]
+  Graph: 2,042,200 nodes, 33,658,288 edges, 73,800,920 triangles  [13270.9s]
+
+[Step 3] Computing curvatures ...  [13827.6s]
+  Euler characteristic chi = 42184832  [13829.3s]
+  Computing edge Forman-Ricci curvatures ...  [13829.3s]
+  Computing scalar curvatures ...  [13916.9s]
+
+[Step 4] Writing outputs ...  [13976.4s]

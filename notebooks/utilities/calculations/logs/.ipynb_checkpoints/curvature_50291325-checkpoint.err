@@ -1,0 +1,2 @@
+usage: curvature.py [-h] [--chrom CHROM] input edge_csv node_csv edge_csv_extra
+curvature.py: error: the following arguments are required: edge_csv_extra

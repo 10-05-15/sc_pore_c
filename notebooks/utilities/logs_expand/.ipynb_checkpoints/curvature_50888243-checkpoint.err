@@ -1,0 +1,2 @@
+/var/spool/slurmd.spool/job50888243/slurm_script: line 27: 2070601 Killed                  "$PYTHON" gather_matrix.py
+[2026-05-25T23:11:58.115] error: Detected 1 oom_kill event in StepId=50888243.batch. Some of the step tasks have been OOM Killed.

@@ -1,0 +1,2 @@
+/scratch/indikar_root/indikar1/jduhamel/conda-envs/pore_c/lib/python3.13/site-packages/anndata/logging.py:57: FutureWarning: The specified parameters ('newline',) are no longer positional. Please specify them like `newline=False`
+  print(format_memory_usage(get_memory_usage(), msg, newline))

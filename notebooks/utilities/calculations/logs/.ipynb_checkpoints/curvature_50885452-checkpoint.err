@@ -1,0 +1,5 @@
+/var/spool/slurmd.spool/job50885452/slurm_script: line 28: 2839349 Killed                  "$PYTHON" curvature.py "$INPUT" "$EDGE_OUT" "$NODE_OUT"
+/var/spool/slurmd.spool/job50885452/slurm_script: line 28: 2889880 Killed                  "$PYTHON" curvature.py "$INPUT" "$EDGE_OUT" "$NODE_OUT"
+/var/spool/slurmd.spool/job50885452/slurm_script: line 28: 3119917 Killed                  "$PYTHON" curvature.py "$INPUT" "$EDGE_OUT" "$NODE_OUT"
+/var/spool/slurmd.spool/job50885452/slurm_script: line 28: 3157258 Killed                  "$PYTHON" curvature.py "$INPUT" "$EDGE_OUT" "$NODE_OUT"
+/var/spool/slurmd.spool/job50885452/slurm_script: line 28: 3271881 Killed                  "$PYTHON" curvature.py "$INPUT" "$EDGE_OUT" "$NODE_OUT"

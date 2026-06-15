@@ -1,0 +1,51 @@
+
+Job information
+#-------------------------------------------------------------------
+SLURM_SUBMIT_HOST    gl3257.arc-ts.umich.edu
+SLURM_JOB_ACCOUNT    indikar0
+SLURM_JOB_PARTITION  standard
+SLURM_JOB_NAME       curvature_reshoot
+SLURM_JOBID          50304199
+SLURM_NODELIST       gl3139
+SLURM_JOB_NUM_NODES  1
+SLURM_NTASKS         1
+SLURM_TASKS_PER_NODE 1
+SLURM_CPUS_PER_TASK  1
+SLURM_NPROCS         1
+SLURM_MEM_PER_CPU    
+SLURM_SUBMIT_DIR     /home/jduhamel/sc_pore_c/notebooks/utilities/calculations
+
+scheduling priority             (-e) 0
+pending signals                 (-i) 765366
+max memory size         (kbytes, -m) 67108864
+open files                      (-n) 131072
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+max user processes              (-u) 765366
+
+Running on gl3139.arc-ts.umich.edu at Fri May 15 22:44:22 EDT 2026
+
+Currently Loaded Modules:
+  1) mamba/py3.12
+
+Your job output begins below the line
+#-------------------------------------------------------------------
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/anndata/population_mESC_1000000_features.h5ad ...
+  Raw: 2,579 loci x 2,756,467 reads
+  IQR-filtering loci ...
+    degree range kept: [2420.5, 4392.5]  -> 2,335 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 2,335 loci x 2,039,865 reads
+
+[Step 1] Building poset complex ...  [26.1s]
+  Building node sets from H ...  [26.1s]
+  2,335 loci + 2,039,865 non-empty reads  [122.3s]
+  Building inverted index ...  [122.3s]
+  Computing Hasse diagram (k_max = 10) ...  [133.4s]
+    cardinality   10:   14,927 nodes  [133.4s]
+    cardinality    9:   24,150 nodes  [672.6s]
+    cardinality    8:   39,415 nodes  [1486.3s]
+    cardinality    7:   66,490 nodes  [2648.2s]

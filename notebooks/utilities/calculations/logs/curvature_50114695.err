@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/jduhamel/sc_pore_c/notebooks/utilities/calculations/curvature.py", line 427, in <module>
+    main()
+    ~~~~^^
+  File "/home/jduhamel/sc_pore_c/notebooks/utilities/calculations/curvature.py", line 420, in main
+    write_node_csv(G, n_loci, adata, obs_idx, var_idx, args.edge_csv_extra)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: write_node_csv() missing 1 required positional argument: 'path_node'

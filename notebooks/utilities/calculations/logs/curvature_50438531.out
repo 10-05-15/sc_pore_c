@@ -1,0 +1,72 @@
+
+Job information
+#-------------------------------------------------------------------
+SLURM_SUBMIT_HOST    gl3135.arc-ts.umich.edu
+SLURM_JOB_ACCOUNT    indikar0
+SLURM_JOB_PARTITION  standard
+SLURM_JOB_NAME       curvature_reshoot
+SLURM_JOBID          50438531
+SLURM_NODELIST       gl3391
+SLURM_JOB_NUM_NODES  1
+SLURM_NTASKS         1
+SLURM_TASKS_PER_NODE 1
+SLURM_CPUS_PER_TASK  3
+SLURM_NPROCS         1
+SLURM_MEM_PER_CPU    
+SLURM_SUBMIT_DIR     /home/jduhamel/sc_pore_c/notebooks/utilities/calculations
+
+scheduling priority             (-e) 0
+pending signals                 (-i) 765365
+max memory size         (kbytes, -m) 67108864
+open files                      (-n) 131072
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+max user processes              (-u) 765365
+
+Running on gl3391.arc-ts.umich.edu at Mon May 18 23:22:56 EDT 2026
+
+Currently Loaded Modules:
+  1) mamba/py3.12
+
+Your job output begins below the line
+#-------------------------------------------------------------------
+[Step 0] Loading and filtering H ...
+Loading /nfs/turbo/umms-indikar/shared/projects/poreC/pipeline_outputs/higher_order/anndata/population_mESC_1000000_features.h5ad ...
+  Raw: 2,579 loci x 2,756,467 reads
+  IQR-filtering loci ...
+    degree range kept: [2420.5, 4392.5]  -> 2,335 loci retained
+  Dropping singleton reads ...
+  Dropping large hyperedges (> 10 loci) ...
+  Filtered: 2,335 loci x 2,039,865 reads
+
+[Step 1] Building poset complex ...  [58.9s]
+  Building node sets from H ...  [58.9s]
+  2,335 loci + 2,039,865 non-empty reads  [143.9s]
+  Building inverted index ...  [143.9s]
+  Computing Hasse diagram (k_max = 10) ...  [150.9s]
+    cardinality   10:   14,927 nodes  [150.9s]
+    cardinality    9:   24,150 nodes  [536.2s]
+    cardinality    8:   39,415 nodes  [1090.8s]
+    cardinality    7:   66,490 nodes  [1840.6s]
+    cardinality    6:  112,824 nodes  [2936.9s]
+    cardinality    5:  193,731 nodes  [4402.4s]
+    cardinality    4:  324,270 nodes  [6296.7s]
+    cardinality    3:  516,472 nodes  [8560.3s]
+    cardinality    2:  747,586 nodes  [10717.4s]
+
+[Step 2] Building graph ...  [12192.8s]
+  Extracting edges and 2-simplices ...  [12192.8s]
+  Graph: 2,042,200 nodes, 33,658,288 edges, 73,800,920 triangles  [12349.9s]
+
+[Step 3] Computing curvatures ...  [12832.9s]
+  Euler characteristic chi = 42184832  [12834.1s]
+  Computing edge Forman-Ricci curvatures ...  [12834.1s]
+  Computing scalar curvatures ...  [12910.1s]
+
+[Step 4] Writing outputs ...  [12961.2s]
+  Writing locus node CSV -> outputs/edges_curvature.csv and outputs/nodes_curvature.csv
+    2,039,865 loci written
+    2,335 loci written
+
+Finished.  chi = 42184832  [13072.7s]

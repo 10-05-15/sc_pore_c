@@ -1,0 +1,2 @@
+/var/spool/slurmd.spool/job50141902/slurm_script: line 34: 3325306 Killed                  /scratch/indikar_root/indikar1/jduhamel/conda-envs/pore_c/bin/python curvature.py "$INPUT" "$EDGE_OUT" "$NODE_OUT" "$EDGE_OUT_EXTRA"
+[2026-05-14T18:40:43.408] error: Detected 1 oom_kill event in StepId=50141902.batch. Some of the step tasks have been OOM Killed.
