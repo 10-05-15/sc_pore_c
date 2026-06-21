@@ -1,2 +1,2 @@
 # sc_pore_c
-Re-up
+Single Cell Pore C data analysis. 
